@@ -67,7 +67,7 @@ GetFactor <- function(inter, pos) {
 ## Main procedure
 ## datadir is the directory containing the unzipped data
 ## tidyfile is the tidy data set of question 5 as a csv file with header
-Run_analysis <- function(datadir, tidyfile) {
+run_analysis <- function(datadir = ".", tidyfile = "final.csv") {
   saveddir <- getwd()   # save the current directory
   # switch to the data directory
   setwd(datadir)
@@ -120,4 +120,4 @@ Run_analysis <- function(datadir, tidyfile) {
   print("Done.") 
   setwd(saveddir)
 }
-
+run_analysis()
